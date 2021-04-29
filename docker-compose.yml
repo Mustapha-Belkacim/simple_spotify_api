@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres:12.6
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    env_file:
+      - ./backend/.env
+  app:
+    build: ./backend
+    env_file:
+      - ./backend/.env
+    command: gunicorn simplespotify.wsgi:application --bind 0.0.0.0:8000 --reload
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
