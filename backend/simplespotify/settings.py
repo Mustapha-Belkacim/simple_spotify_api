@@ -41,13 +41,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 
     'simplespotify.apps.users',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,7 +94,7 @@ DATABASES = {
         'ENGINE': config('DATABASE_ENGINE', default='django.db.backends.sqlite3'),
         'NAME': config('DATABASE_NAME', default=os.path.join(BASE_DIR, 'db.sqlite3')),
         'USER': config('DATABASE_USER', default=None),
-        'PASSWORD': config('DATABASE_USER_PASSWORD', default=None),
+        'PASSWORD': config('POSTGRES_PASSWORD', default=None),
         'HOST': config('DATABASE_HOST', default=None),
         'PORT': config('DATABASE_PORT', default=None)
     }

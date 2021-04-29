@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 psycopg2 = "*"
 djangorestframework = "*"
-django-rest-auth = "*"
+django-rest-auth = {extras = ["with_social"], version = "*"}
 python-decouple = "*"
 gunicorn = "*"
 django-heroku = "*"
