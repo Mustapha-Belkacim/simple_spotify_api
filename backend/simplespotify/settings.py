@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'simplespotify.apps.users',
+    'simplespotify.apps.genres',
 ]
 
 SITE_ID = 1
