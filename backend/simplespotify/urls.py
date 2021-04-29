@@ -24,7 +24,7 @@ from .apps.artists.views import ArtistViewSet
 router = routers.DefaultRouter()
 router.register(r'genres', GenreViewSet)
 router.register(r'albums', AlbumViewSet)
-router.register(r'albums', ArtistViewSet)
+router.register(r'artists', ArtistViewSet)
 
 
 urlpatterns = [
