@@ -18,9 +18,12 @@ from django.urls import path, include
 
 from rest_framework import routers
 from apps.genres.views import GenreViewSet
+from apps.albums.views import AlbumViewSet
 
 router = routers.DefaultRouter()
 router.register(r'genres', GenreViewSet)
+router.register(r'albums', AlbumViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

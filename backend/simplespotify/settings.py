@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     'simplespotify.apps.users',
     'simplespotify.apps.genres',
+    'simplespotify.apps.albums',
 ]
 
 SITE_ID = 1
