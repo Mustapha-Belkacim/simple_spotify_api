@@ -5,5 +5,5 @@ from ..artists.models import Artist
 
 class Album(models.Model):
     name = models.CharField(max_length=100)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
-    artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    genre = models.ForeignKey(Genre, related_name='albums', on_delete=models.CASCADE)
+    artist = models.ForeignKey(Artist, related_name='albums', on_delete=models.CASCADE)
