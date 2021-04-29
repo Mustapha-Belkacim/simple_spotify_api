@@ -17,9 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from apps.genres.views import GenreViewSet
-from apps.albums.views import AlbumViewSet
-from apps.artists.views import ArtistViewSet
+from .apps.genres.views import GenreViewSet
+from .apps.albums.views import AlbumViewSet
+from .apps.artists.views import ArtistViewSet
 
 router = routers.DefaultRouter()
 router.register(r'genres', GenreViewSet)
